@@ -1,12 +1,12 @@
 Package: WineReviews
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Your data analysis project belongs in an R package
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Ruam", "Pimentel", , "ruampimentel@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: Demonstrates how to leverage the R package workflow to organize a data science project.
+License: CC0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
+LazyData: true
