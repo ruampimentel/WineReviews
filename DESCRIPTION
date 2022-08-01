@@ -4,7 +4,7 @@ Version: 0.1.0
 Authors@R: 
     person("Ruam", "Pimentel", , "ruampimentel@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Demonstrates how to leverage the R package workflow to organize a data science project.
+Description: Demonstrates how to leverage the R package workflow to organize a data science project. This is just a test so I (Ruam) can learn. 
 License: CC0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
