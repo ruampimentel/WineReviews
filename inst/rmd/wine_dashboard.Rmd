@@ -1,0 +1,50 @@
+---
+title: "Wine dashboard"
+output: 
+ flexdashboard::flex_dashboard:
+ orientation: columns
+runtime: shiny
+---
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+```
+
+```{r}
+data(wine_data, package = "WineReviews")
+```
+Inputs {.sidebar data-width=150}
+-------------------------------------
+```{r}
+shiny::selectInput(
+ "country",
+ label = "select country",
+ choices = sort(unique(wine_data$country))
+)
+```
+Column
+-------------------------------------
+### Wine points versus price
+ 
+```{r}
+shiny::renderPlot(
+ ggplot(wine_data[wine_data$country == input$country, ],
+ aes(points, log10(price), group = points)) +
+ geom_boxplot() +
+ labs(x = "points scored by the wine on a 100 scale",
+ y = "Base-10 logarithm of the wine price") +
+ theme_bw()
+)
+```
+Column
+-------------------------------------
+### Wine price distribution
+ 
+```{r}
+shiny::renderPlot(
+ ggplot(wine_data[wine_data$country == input$country, ], aes(price)) +
+ geom_density() +
+ labs(y = "Price density function") +
+ theme_bw()
+)
+```

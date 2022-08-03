@@ -1,0 +1,28 @@
+---
+title: "Wine Reviews EDA"
+output: rmarkdown::html_vignette
+vignette: >
+ %\VignetteIndexEntry{Wine Reviews EDA}
+ %\VignetteEngine{knitr::rmarkdown}
+ %\VignetteEncoding{UTF-8}
+---
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+ collapse = TRUE,
+ comment = "#>"
+)
+```
+
+```{r setup}
+library(WineReviews)
+```
+
+```{r}
+#load the previously created wine_data data frame
+data(wine_data, package = "WineReviews")
+```
+
+```{r}
+summary(wine_data)
+```
+

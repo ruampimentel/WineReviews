@@ -1,2 +1,4 @@
 ^WineReviews\.Rproj$
 ^\.Rproj\.user$
+^data-raw$
+^inst/extdata$
